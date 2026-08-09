@@ -1,0 +1,771 @@
+/* =========================
+   GOOGLE FONT
+========================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* =========================
+   RESET
+========================= */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:'Poppins',sans-serif;
+  background:#070707;
+  color:#ffffff;
+  min-height:100vh;
+
+  background-image:
+    radial-gradient(circle at top left,#8b000030,transparent 35%),
+    radial-gradient(circle at bottom right,#ff000020,transparent 35%);
+}
+
+/* =========================
+   APP
+========================= */
+
+.app{
+  min-height:100vh;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.header{
+  text-align:center;
+  padding:45px 20px;
+}
+
+.header h1{
+  font-size:42px;
+  font-weight:800;
+  letter-spacing:1px;
+
+  color:#fff;
+}
+
+.header p{
+  margin-top:10px;
+  color:#cfcfcf;
+  font-size:16px;
+}
+
+/* =========================
+   SUMMARY
+========================= */
+
+.summary{
+
+  width:min(1150px,92%);
+  margin:auto;
+
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+
+  gap:20px;
+}
+
+.summary-card{
+
+  padding:28px;
+
+  border-radius:18px;
+
+  backdrop-filter:blur(16px);
+
+  transition:.35s;
+
+  border:1px solid rgba(255,255,255,.08);
+
+  box-shadow:
+  0 10px 35px rgba(0,0,0,.35);
+}
+
+.summary-card:hover{
+
+  transform:translateY(-6px);
+
+  box-shadow:
+  0 18px 45px rgba(255,0,0,.18);
+}
+
+.balance-card{
+
+  background:
+  linear-gradient(
+  135deg,
+  #1d4ed8,
+  #2563eb
+  );
+}
+
+.income-card{
+
+  background:
+  linear-gradient(
+  135deg,
+  #15803d,
+  #22c55e
+  );
+}
+
+.expense-card{
+
+  background:
+  linear-gradient(
+  135deg,
+  #991b1b,
+  #ef4444
+  );
+}
+
+.summary-card h3{
+
+  font-size:16px;
+  font-weight:500;
+  opacity:.9;
+
+  margin-bottom:10px;
+}
+
+.summary-card h2{
+
+  font-size:34px;
+  font-weight:700;
+}
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+
+.container{
+
+  width:min(1150px,92%);
+  margin:35px auto;
+
+  display:grid;
+
+  grid-template-columns:
+  370px
+  1fr;
+
+  gap:25px;
+}
+
+/* =========================
+   GLASS CARD
+========================= */
+
+.form-section,
+.transactions-section{
+
+  background:
+  rgba(255,255,255,.05);
+
+  border:
+  1px solid rgba(255,255,255,.08);
+
+  border-radius:20px;
+
+  backdrop-filter:blur(18px);
+
+  padding:28px;
+
+  box-shadow:
+  0 10px 35px rgba(0,0,0,.35);
+}
+
+.form-section h2,
+.transactions-section h2{
+
+  margin-bottom:22px;
+
+  font-size:24px;
+}
+
+/* =========================
+   FORM
+========================= */
+
+form{
+
+  display:flex;
+
+  flex-direction:column;
+
+  gap:15px;
+}
+
+input,
+select,
+textarea{
+
+  width:100%;
+
+  padding:14px 16px;
+
+  border-radius:12px;
+
+  border:1px solid #2c2c2c;
+
+  background:#111;
+
+  color:white;
+
+  font-size:15px;
+
+  outline:none;
+
+  transition:.25s;
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+
+  border-color:#ff2b2b;
+
+  box-shadow:
+  0 0 15px rgba(255,0,0,.25);
+}
+
+textarea{
+
+  resize:none;
+
+  min-height:110px;
+}
+
+form button{
+
+  margin-top:10px;
+
+  padding:15px;
+
+  border:none;
+
+  border-radius:12px;
+
+  cursor:pointer;
+
+  font-size:16px;
+
+  font-weight:700;
+
+  color:white;
+
+  background:
+  linear-gradient(
+  135deg,
+  #ff2020,
+  #8b0000
+  );
+
+  transition:.3s;
+}
+
+form button:hover{
+
+  transform:translateY(-3px);
+
+  box-shadow:
+  0 12px 30px rgba(255,0,0,.35);
+}
+
+/* =========================
+   FILTERS
+========================= */
+
+.filters{
+  display:flex;
+  gap:15px;
+  margin-bottom:25px;
+}
+
+.filters input{
+  flex:1;
+}
+
+.filters select{
+  width:220px;
+}
+
+/* =========================
+   TRANSACTION LIST
+========================= */
+
+.transaction-list{
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+}
+
+.transaction-card{
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  padding:18px;
+
+  border-radius:16px;
+
+  background:#101010;
+
+  border:1px solid #202020;
+
+  transition:.3s;
+}
+
+.transaction-card:hover{
+
+  transform:translateY(-4px);
+
+  border-color:#ff3030;
+
+  box-shadow:
+  0 12px 30px rgba(255,0,0,.18);
+}
+
+.transaction-left h3{
+
+  font-size:19px;
+
+  margin-bottom:6px;
+
+  color:white;
+}
+
+.transaction-left p{
+
+  color:#bbbbbb;
+
+  font-size:14px;
+
+  margin-bottom:8px;
+}
+
+.transaction-right{
+
+  display:flex;
+
+  flex-direction:column;
+
+  align-items:flex-end;
+
+  gap:12px;
+}
+
+.transaction-right strong{
+
+  font-size:24px;
+
+  color:white;
+}
+
+/* =========================
+   INCOME / EXPENSE TAGS
+========================= */
+
+.income-text{
+
+  display:inline-block;
+
+  color:#22c55e;
+
+  font-weight:700;
+
+  background:rgba(34,197,94,.12);
+
+  padding:5px 12px;
+
+  border-radius:999px;
+}
+
+.expense-text{
+
+  display:inline-block;
+
+  color:#ef4444;
+
+  font-weight:700;
+
+  background:rgba(239,68,68,.12);
+
+  padding:5px 12px;
+
+  border-radius:999px;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.transaction-actions{
+
+  display:flex;
+
+  gap:10px;
+}
+
+.edit-btn,
+.delete-btn{
+
+  border:none;
+
+  padding:10px 16px;
+
+  border-radius:10px;
+
+  cursor:pointer;
+
+  color:white;
+
+  font-weight:600;
+
+  transition:.25s;
+}
+
+.edit-btn{
+
+  background:#2563eb;
+}
+
+.edit-btn:hover{
+
+  background:#1d4ed8;
+
+  transform:translateY(-2px);
+}
+
+.delete-btn{
+
+  background:#dc2626;
+}
+
+.delete-btn:hover{
+
+  background:#b91c1c;
+
+  transform:translateY(-2px);
+}
+
+/* =========================
+   EMPTY STATE
+========================= */
+
+.transactions-section p{
+
+  color:#bdbdbd;
+
+  text-align:center;
+
+  padding:25px 0;
+}
+
+/* =========================
+   SCROLLBAR
+========================= */
+
+::-webkit-scrollbar{
+  width:10px;
+}
+
+::-webkit-scrollbar-track{
+  background:#0f0f0f;
+}
+
+::-webkit-scrollbar-thumb{
+  background:#a30000;
+  border-radius:20px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+  background:#ff2d2d;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width:950px){
+
+.container{
+
+grid-template-columns:1fr;
+
+}
+
+.summary{
+
+grid-template-columns:1fr;
+
+}
+
+.filters{
+
+flex-direction:column;
+
+}
+
+.filters select{
+
+width:100%;
+
+}
+
+.transaction-card{
+
+flex-direction:column;
+
+align-items:flex-start;
+
+gap:18px;
+
+}
+
+.transaction-right{
+
+width:100%;
+
+align-items:flex-start;
+
+}
+
+.transaction-actions{
+
+width:100%;
+
+}
+
+.edit-btn,
+.delete-btn{
+
+flex:1;
+
+}
+
+}
+
+@media (max-width:600px){
+
+.header h1{
+
+font-size:32px;
+
+}
+
+.summary-card h2{
+
+font-size:28px;
+
+}
+
+.form-section,
+.transactions-section{
+
+padding:20px;
+
+}
+
+.transaction-right strong{
+
+font-size:20px;
+
+}
+
+}
+
+/* =========================
+   FADE ANIMATION
+========================= */
+
+.summary-card,
+.transaction-card,
+.form-section,
+.transactions-section{
+
+animation:fadeUp .45s ease;
+}
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+transform:translateY(20px);
+
+}
+
+to{
+
+opacity:1;
+transform:translateY(0);
+
+}
+
+}
+
+.export-btn{
+
+padding:14px 24px;
+
+margin-bottom:20px;
+
+background:#16a34a;
+
+color:white;
+
+border:none;
+
+border-radius:12px;
+
+font-size:15px;
+
+font-weight:600;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+.export-btn:hover{
+
+background:#15803d;
+
+transform:translateY(-2px);
+
+}
+
+/* Header */
+
+.header-top{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:20px;
+}
+
+/* Theme Button */
+
+.theme-btn{
+  padding:12px 20px;
+  border:none;
+  border-radius:10px;
+  cursor:pointer;
+  font-size:15px;
+  font-weight:600;
+  transition:.3s;
+}
+
+body.dark .theme-btn{
+  background:#ef4444;
+  color:white;
+}
+
+body.light .theme-btn{
+  background:#2563eb;
+  color:white;
+}
+
+.theme-btn:hover{
+  transform:translateY(-2px);
+}
+
+/* ---------- DARK THEME ---------- */
+
+body.dark{
+  background:#0d1117;
+  color:#ffffff;
+}
+
+/* ---------- LIGHT THEME ---------- */
+
+body.light{
+  background:#f4f4f4;
+  color:#111827;
+}
+
+body.light .header{
+  background:#ffffff;
+}
+
+body.light .summary-card,
+body.light .form-section,
+body.light .transactions-section,
+body.light .transaction-card{
+  background:#ffffff;
+  color:#111827;
+  border:1px solid #d1d5db;
+}
+
+body.light input,
+body.light textarea,
+body.light select{
+  background:#ffffff;
+  color:#111827;
+  border:1px solid #cbd5e1;
+}
+
+body.light input::placeholder,
+body.light textarea::placeholder{
+  color:#6b7280;
+}
+
+/* =========================
+   Mobile Responsive
+========================= */
+
+@media (max-width: 768px){
+
+  .container{
+    grid-template-columns:1fr;
+    gap:20px;
+  }
+
+  .summary{
+    grid-template-columns:1fr;
+  }
+
+  .header-top{
+    flex-direction:column;
+    gap:15px;
+    text-align:center;
+  }
+
+  .filters{
+    flex-direction:column;
+  }
+
+  .transaction-card{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:15px;
+  }
+
+  .transaction-right{
+    width:100%;
+  }
+
+  .transaction-actions{
+    width:100%;
+    display:flex;
+    gap:10px;
+  }
+
+  .transaction-actions button{
+    flex:1;
+  }
+
+}
